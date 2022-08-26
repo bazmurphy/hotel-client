@@ -3,6 +3,9 @@ import Search from "./Search.js";
 import SearchResults from "./SearchResults";
 import CustomerProfile from "./CustomerProfile.js";
 // import FakeBookings from "./data/fakeBookings.json";
+import AddBooking from "./AddBooking.js";
+import UpdateBooking from "./UpdateBooking.js";
+import DeleteBooking from "./DeleteBooking.js";
 
 const Bookings = () => {
   const [bookings, setBookings] = React.useState([]);
@@ -90,6 +93,11 @@ const Bookings = () => {
         <SearchResults results={bookings} setCustomerId={setCustomerId} />
       )}
       {customerId && <CustomerProfile id={customerId} />}
+      <div className="crud-container">
+        <AddBooking />
+        <UpdateBooking />
+        <DeleteBooking />
+      </div>
     </div>
   );
 };

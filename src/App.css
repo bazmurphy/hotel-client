@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.App {
+  /* border: 1px solid black; */
+  background-color: #ece4ec;
+  max-width: 900px;
+}
+
+/* Heading.js */
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  color: white;
+  background: linear-gradient(180deg, #020024 40%, #8548d4 100%);
+  border: 4px solid #00f4fe;
+}
+
+.heading-image {
+  display: block;
+  width: 56px;
+  height: auto;
+}
+
+.heading-title {
+  font-family: "Fredoka One", sans-serif;
+  text-shadow: 3px 3px 2px #00f4fe;
+}
+
+/* TouristInfoCards.js */
+.tourist-info-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #00f4fe;
+}
+
+.tourist-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  border-radius: 0.25rem;
+  box-shadow: 0 0 4px 2px #d999fa;
+}
+
+.tourist-info-card-image {
+  max-width: 100%;
+  border-radius: 0.2rem;
+  /* filter: grayscale(100%) brightness(75%) sepia(100%) hue-rotate(-125deg) saturate(250%) contrast(1); */
+  filter: saturate(150%);
+}
+
+.tourist-info-card-title {
+  font-size: 1.6rem;
+  font-family: "Fredoka One", sans-serif;
+  color: #1b235d;
+  text-shadow: 2px 2px 1px #00f4fe;
+}
+
+.tourist-info-card-description {
+  font-size: 0.8rem;
+  font-style: italic;
+  /* text-shadow: 0px 0px 1px black; */
+}
+
+.tourist-info-card-link {
+  padding: 0.3rem 0.6rem;
+  /* border: 0.1rem solid #da99fa; */
+  border-radius: 0.25rem;
+  box-shadow: 0 0 4px 2px #7deffc;
+  background-color: #00b2f7;
+  font-size: 0.8rem;
+  color: white;
+  text-shadow: 0px 0px 2px black;
+}
+
+.tourist-info-card-link:hover {
+  background-color: #00d1f0;
+  color: white;
+  text-decoration: none;
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #00f4fe;
+}
+
+.search-container {
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 4px 2px #d999fa;
+}
+
+.search-title {
+  font-size: 1.6rem;
+  font-family: "Fredoka One", sans-serif;
+  color: #1b235d;
+  text-shadow: 2px 2px 1px #00f4fe;
+}
+
+.search-form-label {
+  font-size: 0.8rem;
+}
+
+.search-form > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-form-input {
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+  width: 200px;
+}
+
+.search-form-button {
+  padding: 0.3rem 0.6rem;
+  /* border: 0.1rem solid #da99fa; */
+  box-shadow: 0 0 4px 2px #7deffc;
+  border-radius: 0.2rem;
+  background-color: #00b2f7;
+  font-size: 0.8rem;
+  color: white;
+  text-shadow: 0px 0px 2px black;
+  cursor: pointer;
+}
+
+.search-form-button:hover {
+  background-color: #00d1f0;
+  color: white;
+  text-decoration: none;
+}
+
+.search-results-loading-container {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 4px 2px #d999fa;
+}
+
+.search-results-loading-text {
+  color: #654bc9;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.search-results-loading-image {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.search-results-error-container {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 4px 2px #d999fa;
+}
+
+.search-results-error-text {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.search-results-error-image {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.search-results-table {
+  font-size: 0.8rem;
+}
+
+.search-results-table-head {
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 2px 1px #d999fa;
+  background-color: rgba(128, 80, 189, 0.2);
+  border-radius: 0.25rem;
+}
+
+.search-results-table-head-row {
+  padding: 0.5rem;
+}
+
+.search-results-table-head-row > th {
+  padding: 0.5rem;
+}
+
+.search-results-table-body-row {
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 2px 1px #d999fa;
+  border-radius: 0.25rem;
+}
+
+.search-results-table-body-row > th {
+  padding: 0.5rem;
+}
+
+.search-results-table-body-row > td {
+  padding: 0.5rem;
+}
+
+.search-result-button-show-profile {
+  /* border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem; */
+  /* border: 0.1rem solid #da99fa; */
+  padding: 1px;
+  box-shadow: 0 0 4px 2px #7deffc;
+  border-radius: 0.2rem;
+  background-color: #00b2f7;
+  font-size: 0.8rem;
+  color: white;
+  text-shadow: 0px 0px 2px black;
+  cursor: pointer;
+}
+
+.search-result-button-show-profile:hover {
+  background-color: #00d1f0;
+  color: white;
+}
+
+.highlighted {
+  background-color: #00d1f0;
+}
+
+.customer-profile-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 4px 2px #d999fa;
+  font-size: 0.8rem;
+}
+
+.customer-profile-title {
+  font-size: 1.6rem;
+  font-family: "Fredoka One", sans-serif;
+  color: #1b235d;
+  text-shadow: 2px 2px 1px #00f4fe;
+}
+
+.restaurant-container {
+  padding: 1rem;
+  border: 2px solid #00f4fe;
+}
+
+.restaurant-sub-container {
+  padding: 0.5rem;
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 0 4px 2px #d999fa;
+  border-radius: 0.25rem;
+}
+
+.restaurant-title {
+  font-size: 1.6rem;
+  font-family: "Fredoka One", sans-serif;
+  color: #1b235d;
+  text-shadow: 2px 2px 1px #00f4fe;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.restaurant-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.restaurant-list-item-button {
+  padding: 0.3rem 0.6rem;
+  /* border: 0.1rem solid #da99fa; */
+  border-radius: 0.2rem;
+  background-color: #00b2f7;
+  box-shadow: 0 0 6px 2px #7deffc;
+  color: white;
+  font-size: 0.8rem;
+  text-shadow: 0px 0px 2px black;
+  cursor: pointer;
+}
+
+.restaurant-list-item-button:hover {
+  background-color: #00d1f0;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-container {
+  border: 2px solid #00f4fe;
+  padding: 0.5rem;
+}
+
+.footer-contact {
+  text-align: right;
+  font-size: 0.7rem;
+  list-style: none;
+  margin: 0;
+}

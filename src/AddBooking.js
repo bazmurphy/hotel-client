@@ -1,5 +1,12 @@
 import React from "react";
 
+// const navigate = useNavigate();
+
+const handleSubmit = (event) => {
+    console.log(event)
+    event.preventDefault();
+}
+
 const AddBooking = () => {
     return (
         <div className="add-booking-container">
@@ -19,7 +26,7 @@ const AddBooking = () => {
                 <input className="add-booking-input" type="date" name="checkInDate" required/>
                 <label className="add-booking-label" for="checkOutDate">Check Out Date:</label>
                 <input className="add-booking-input" type="date" name="checkOutDate" required/>
-                <button className="add-booking-button" type="submit">Add Booking</button>
+                <button className="add-booking-button" type="submit" onSubmit={handleSubmit}>Add Booking</button>
             </form>
         </div>
     );

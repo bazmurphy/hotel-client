@@ -25,7 +25,7 @@ const Bookings = () => {
   const [refetchBookingsIndex, setRefetchBookingsIndex] = React.useState(0);
 
   const refetchBookings = () => {
-    setRefetchBookingsIndex(i => i + 1)
+    setRefetchBookingsIndex(i => i + 1);
   };
 
   React.useEffect(() => {
@@ -99,9 +99,9 @@ const Bookings = () => {
       )}
       {customerId && <CustomerProfile id={customerId} />}
       <div className="crud-container">
-        <AddBooking refetchBookings={refetchBookings}/>
+        <AddBooking refetchBookings={refetchBookings} />
         <UpdateBooking />
-        <DeleteBooking />
+        <DeleteBooking refetchBookings={refetchBookings} />
       </div>
     </div>
   );

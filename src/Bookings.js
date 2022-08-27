@@ -100,7 +100,7 @@ const Bookings = () => {
       {customerId && <CustomerProfile id={customerId} />}
       <div className="crud-container">
         <AddBooking refetchBookings={refetchBookings} />
-        <UpdateBooking />
+        <UpdateBooking refetchBookings={refetchBookings} />
         <DeleteBooking refetchBookings={refetchBookings} />
       </div>
     </div>

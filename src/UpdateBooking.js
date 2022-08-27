@@ -1,6 +1,6 @@
 import React from "react";
 
-const UpdateBooking = () => {
+const UpdateBooking = props => {
   const [id, setId] = React.useState("");
   const [roomId, setRoomId] = React.useState("");
   const [title, setTitle] = React.useState("");

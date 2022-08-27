@@ -22,7 +22,7 @@ const AddBooking = (props) => {
             body: JSON.stringify({
                 roomId: roomId,
                 title: title,
-                firstname: firstName,
+                firstName: firstName,
                 surname: surname,
                 email: email,
                 checkInDate: checkInDate,

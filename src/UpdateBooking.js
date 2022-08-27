@@ -73,7 +73,6 @@ const UpdateBooking = () => {
           type="number"
           name="roomId"
           placeholder="Room ID"
-          required
           onChange={event => setRoomId(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="title">
@@ -84,7 +83,6 @@ const UpdateBooking = () => {
           type="text"
           name="title"
           placeholder="Title"
-          required
           onChange={event => setTitle(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="firstName">
@@ -95,7 +93,6 @@ const UpdateBooking = () => {
           type="text"
           name="firstName"
           placeholder="First Name"
-          required
           onChange={event => setFirstName(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="surname">
@@ -106,7 +103,6 @@ const UpdateBooking = () => {
           type="text"
           name="surname"
           placeholder="Surname"
-          required
           onChange={event => setSurname(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="email">
@@ -117,7 +113,6 @@ const UpdateBooking = () => {
           type="text"
           name="email"
           placeholder="Email"
-          required
           onChange={event => setEmail(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="checkInDate">
@@ -127,7 +122,6 @@ const UpdateBooking = () => {
           className="update-booking-input"
           type="date"
           name="checkInDate"
-          required
           onChange={event => setCheckInDate(event.target.value)}
         />
         <label className="update-booking-label" htmlFor="checkOutDate">
@@ -137,7 +131,6 @@ const UpdateBooking = () => {
           className="update-booking-input"
           type="date"
           name="checkOutDate"
-          required
           onChange={event => setCheckOutDate(event.target.value)}
         />
         <button className="update-booking-button" type="submit">

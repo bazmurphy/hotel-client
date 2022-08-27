@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerProfile from "./CustomerProfile";
+// import CustomerProfile from "./CustomerProfile";
 
 const SearchResultSingular = props => {
   // console.log(`SearchResultSingular props: ${props}`);

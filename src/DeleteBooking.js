@@ -27,8 +27,9 @@ const DeleteBooking = props => {
         // console.log(res.json());
         // console.log(JSON.parse(res));
         // console.log(JSON.parse(res.body));
-        res = res.json();
-        setMessage(res.message);
+        messagepart1 = res.json();
+        console.log(messagepart1);
+        setMessage(messagepart1.message);
       })
       .catch(error => {
         console.log(error);

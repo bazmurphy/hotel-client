@@ -22,7 +22,7 @@ const DeleteBooking = props => {
           setId("");
           props.refetchBookings();
         }
-        setMessage(res.body.message);
+        setMessage(JSON.parse(res.body.message));
       })
       .catch(error => {
         console.log(error);

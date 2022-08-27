@@ -15,11 +15,11 @@ const DeleteBooking = props => {
       })
     })
       .then(res => {
+        console.log(res);
         if (res.status === 200) {
           setId("");
           props.refetchBookings();
         }
-        console.log(res);
       })
       .catch(error => {
         console.log(error);

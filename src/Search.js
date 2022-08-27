@@ -22,17 +22,15 @@ const Search = props => {
         <label className="search-form-label" htmlFor="customerName">
           Customer name
         </label>
-        <div>
-          <input
-            type="text"
-            id="customerName"
-            value={searchInput}
-            onChange={handleSearchInput}
-            className="search-form-input"
-            placeholder="Search for a customer..."
-          />
-          <SearchButton />
-        </div>
+        <input
+          type="text"
+          id="customerName"
+          value={searchInput}
+          onChange={handleSearchInput}
+          className="search-form-input"
+          placeholder="Search for a customer..."
+        />
+        <SearchButton />
       </form>
     </div>
   );

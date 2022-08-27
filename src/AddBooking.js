@@ -27,6 +27,7 @@ const AddBooking = props => {
       })
     })
       .then(res => {
+        console.log(res);
         if (res.status === 200) {
           setRoomId("");
           setTitle("");
@@ -37,7 +38,6 @@ const AddBooking = props => {
           setCheckOutDate("");
           props.refetchBookings();
         }
-        console.log(res);
       })
       .catch(error => {
         console.log(error);

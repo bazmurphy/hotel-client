@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddBooking = () => {
+const AddBooking = (props) => {
 
     const [roomId, setRoomId] = React.useState("");
     const [title, setTitle] = React.useState("");
@@ -16,7 +16,7 @@ const AddBooking = () => {
         
         event.preventDefault();
 
-        fetch(`http://localhost:3001/bookings/add`, {
+        fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings/add`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -30,6 +30,16 @@ const AddBooking = () => {
             })
         })
         .then(res => {
+            if (res.status === 200) {
+                setRoomId("");
+                setTitle("");
+                setFirstName("");
+                setSurname("");
+                setEmail("");
+                setCheckInDate("");
+                setCheckOutDate("");
+                props.refetchBookings();
+            }
             console.log(res);
         })
     };

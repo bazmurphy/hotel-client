@@ -22,8 +22,14 @@ const Bookings = () => {
     statusText: ""
   });
 
+  const [refetchBookingsIndex, setRefetchBookingsIndex] = React.useState(0);
+
+  const refetchBookings = () => {
+    setRefetchBookingsIndex(i => i + 1)
+  };
+
   React.useEffect(() => {
-    fetch(`http://localhost:3001/bookings`)
+    fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings`)
       .then(res => {
         // console.log(res)
         if (!res.ok) {
@@ -33,7 +39,7 @@ const Bookings = () => {
             status: res.status,
             statusText: res.statusText
           });
-          throw new Error(res);
+          // throw new Error(res);
         } else {
           return res.json();
         }
@@ -44,10 +50,9 @@ const Bookings = () => {
       })
       .catch(error => {
         console.log(error);
-        // something is lost here when the (res) is sent as the thrown error
-        // cannot access the ok/status/statusText key/values;
+        // an error is only a string type
       });
-  }, []);
+  }, [refetchBookingsIndex]);
 
   const search = searchVal => {
     // console.log(`search function ran with searchVal: ${searchVal}`);
@@ -74,7 +79,7 @@ const Bookings = () => {
             alt="loading icon"
           />
           <span className="search-results-error-text">
-            An Error occured when fetching the Bookings Data :{" "}
+            An Error occured when fetching the Bookings Data :
             {errorOccurred.status} {errorOccurred.statusText}
           </span>
         </div>
@@ -94,7 +99,7 @@ const Bookings = () => {
       )}
       {customerId && <CustomerProfile id={customerId} />}
       <div className="crud-container">
-        <AddBooking />
+        <AddBooking refetchBookings={refetchBookings}/>
         <UpdateBooking />
         <DeleteBooking />
       </div>

@@ -10,6 +10,8 @@ const UpdateBooking = props => {
   const [checkInDate, setCheckInDate] = React.useState("");
   const [checkOutDate, setCheckOutDate] = React.useState("");
 
+  const [message, setMessage] = React.useState("");
+
   const handleSubmit = event => {
     // console.log(event);
     event.preventDefault();
@@ -44,6 +46,7 @@ const UpdateBooking = props => {
           setCheckOutDate("");
           props.refetchBookings();
         }
+        setMessage(res.body.message);
       })
       .catch(error => {
         console.log(error);
@@ -137,6 +140,7 @@ const UpdateBooking = props => {
           Update Booking
         </button>
       </form>
+      {message && <p className="update-booking-message">{message}</p>}
     </div>
   );
 };

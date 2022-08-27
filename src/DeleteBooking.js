@@ -3,6 +3,8 @@ import React from "react";
 const DeleteBooking = props => {
   const [id, setId] = React.useState("");
 
+  const [message, setMessage] = React.useState("");
+
   const handleSubmit = event => {
     // console.log(event);
     event.preventDefault();
@@ -20,6 +22,7 @@ const DeleteBooking = props => {
           setId("");
           props.refetchBookings();
         }
+        setMessage(res.body.message);
       })
       .catch(error => {
         console.log(error);
@@ -45,6 +48,7 @@ const DeleteBooking = props => {
           Delete Booking
         </button>
       </form>
+      {message && <p className="delete-booking-message">{message}</p>}
     </div>
   );
 };

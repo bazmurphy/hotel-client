@@ -31,6 +31,8 @@
 }
 
 .heading-title {
+  font-size: 2.4rem;
+  font-weight: 400;
   font-family: "Fredoka One", sans-serif;
   text-shadow: 3px 3px 2px #00f4fe;
 }
@@ -116,13 +118,14 @@
   text-shadow: 2px 2px 1px #00f4fe;
 }
 
-.search-form-label {
-  font-size: 0.8rem;
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.search-form > div {
-  display: flex;
-  gap: 0.5rem;
+.search-form-label {
+  font-size: 0.8rem;
 }
 
 .search-form-input {

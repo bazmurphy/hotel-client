@@ -4,7 +4,8 @@ const CustomerProfile = props => {
   const [customerProfileData, setCustomerProfileData] = React.useState("");
 
   React.useEffect(() => {
-    fetch(`https://cyf-react.glitch.me/customers/${props.id}`)
+    // fetch(`http://localhost:3001/customers/${props.id}`)
+    fetch(`https://cyf-bazmurphy-hotel.glitch.me/customers/${props.id}`)
       .then(res => res.json())
       .then(data => setCustomerProfileData(data));
   }, [props.id]);

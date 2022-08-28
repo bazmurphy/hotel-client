@@ -29,7 +29,8 @@ const Bookings = () => {
   };
 
   React.useEffect(() => {
-    fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings`)
+      // fetch(`http://localhost:3001/bookings`)
+      fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings`)
       .then(res => {
         // console.log(res)
         if (!res.ok) {

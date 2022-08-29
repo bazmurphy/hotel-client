@@ -5,7 +5,7 @@ const CustomerProfile = props => {
 
   React.useEffect(() => {
     // fetch(`http://localhost:3001/customers/${props.id}`)
-    fetch(`https://cyf-bazmurphy-hotel.glitch.me/customers/${props.id}`)
+    fetch(`https://cyf-bazmurphy-hotel-server.glitch.me/customers/${props.id}`)
       .then(res => res.json())
       .then(data => setCustomerProfileData(data));
   }, [props.id]);

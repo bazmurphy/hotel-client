@@ -9,7 +9,7 @@ const DeleteBooking = props => {
     // console.log(event);
     event.preventDefault();
 
-    fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings/delete`, {
+    fetch(`https://cyf-bazmurphy-hotel-server.glitch.me/bookings/delete`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

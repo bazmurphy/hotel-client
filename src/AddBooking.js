@@ -15,7 +15,7 @@ const AddBooking = props => {
     // console.log(event);
     event.preventDefault();
 
-    fetch(`https://cyf-bazmurphy-hotel.glitch.me/bookings/add`, {
+    fetch(`https://cyf-bazmurphy-hotel-server.glitch.me/bookings/add`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
